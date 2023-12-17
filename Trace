@@ -1,3 +1,24 @@
+mon- 
+
+mons mp 
+
+lh mp te e F1AP_ENCODE * 
+lh mp te e F1AP_DECODE * 
+lh mp te e E1AP_ENCODE * 
+lh mp te e E1AP_DECODE * 
+lh mp te e RRC_ENCODE * 
+lh mp te e RRC_DECODE * 
+lh mp te e NGAP_ENCODE * 
+lh mp te e NGAP_DECODE * 
+lh mp te e X2AP_ENCODE * 
+lh mp te e X2AP_DECODE * 
+lh mp te e XNAP_ENCODE * 
+lh mp te e XNAP_DECODE * 
+lh mp te e NRPPA_ENCODE * 
+lh mp te e NRPPA_DECODE * 
+lh mp te e S1AP_ENCODE * 
+lh mp te e S1AP_DECODE *
+
 eNB 
 
 ue enable -allcell -allUe -timeout 720
