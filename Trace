@@ -1,0 +1,73 @@
+eNB 
+
+ue enable -allcell -allUe -timeout 720
+
+te e all Ft_ENDC_SETUP
+
+te e all Ft_ENDC_RELEASE
+
+te e all Ft_ENDC
+
+te e all Ft_SGNB_CHANGE
+
+te e all Ft_NR_LEG_RELEASE
+
+te e all Ft_S1AP_ASN
+
+te e all Ft_X2AP_ASN
+
+te e all Ft_RRC_ASN
+
+te e all Ft_NR_RRC_ASN
+
+te e all Ft_CONN_COORD
+
+te e all Ft_INITIAL_CTXT_SETUP
+
+lh mp te filter set '[0]<>$0 OR [1]<>$0A OR [2]<>$40' Ft_S1AP_ASN
+
+lh mp te filter set "[0]<>$0 OR [1]<>$0A OR [2]<>$40" Ft_S1AP_ASN
+
+gNB 
+
+te e * com_ericsson_rp_ue
+
+te e * com_ericsson_rp_config_nr
+
+te e * com_ericsson_rp_cell_nr_manager
+
+te e * com_ericsson_rp_cell_nr
+
+te e * com_ericsson_rc_nwif
+
+te e * com_ericsson_pp_nr_upper_pp_uemi
+
+te e * com_ericsson_rpc_uemi
+
+te e * com_ericsson_rc_ue_nr_endc
+
+te e * com_ericsson_rc_config_nr
+
+te e * com_ericsson_rc_cell_nr_manager_rc_cell_nr
+
+te e * com_ericsson_pp_e6_bearer
+
+te e * com_ericsson_pp_bearer_res_coord
+
+te e * com_ericsson_pp_bearerctrl_res_mgmt
+
+te e * com_ericsson_rc_control
+
+te e * com_ericsson_rp_bbrs
+
+te e * com_ericsson_pprm
+
+te e * com_ericsson_rc_tc
+
+te e DEBUG com_ericsson_pp_*
+
+te e * com_ericsson_obs
+
+te e * com_ericsson_rc_obs
+
+te e * com_ericsson_rp_obs
